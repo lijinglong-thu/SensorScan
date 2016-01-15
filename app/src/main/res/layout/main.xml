@@ -3,48 +3,81 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="accData"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvAccData"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="gyroData"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvGyroData"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="magData"
-        android:textSize="20sp"/>
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvMagData"/>
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/delay_acc"
-        android:text="10"/>
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/delay_gyro"
-        android:text="10"/>
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/delay_mag"
-        android:text="10"/>
+        <CheckBox
+            android:id="@+id/accSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Accelerometer"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvAccData"/>
+        <CheckBox
+            android:id="@+id/linerAccSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="LinerAcceleromet"
+            android:checked="true"/>
+        <CheckBox
+            android:id="@+id/gyroUnCalSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope_Uncalibrated"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGyroData"/>
+        <CheckBox
+            android:id="@+id/gyroSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gyroscope"
+            android:checked="false"/>
+        <CheckBox
+            android:id="@+id/magUnCalSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnetometer_Uncalibrated"
+            android:checked="false"/>
+        <CheckBox
+            android:id="@+id/magSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Magnetometer"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMagData"/>
+        <CheckBox
+            android:id="@+id/GPSSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GPS"
+            android:checked="false"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvGPSLoc"/>
+        <CheckBox
+            android:id="@+id/gravitySelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gravity"
+            android:checked="true"/>
+        <CheckBox
+            android:id="@+id/rotVecSelected"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RotationVector"
+            android:checked="true"/>
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvOrientation"/>
+
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -55,6 +88,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/scanStop"
         android:text="Stop"/>
-
 
 </LinearLayout>
