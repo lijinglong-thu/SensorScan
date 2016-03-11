@@ -104,6 +104,9 @@ public class SensorScanActivity extends Activity {
     private File accMag2oriFileName;
     private File GPSLocFileName;
 
+    //²ÉÑùÆµÂÊ
+    private int sampleRate = 40;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -677,28 +680,28 @@ public class SensorScanActivity extends Activity {
     private void updateSelectedSensor(){
         sensorManager.unregisterListener(mySensorListener);
         if (accSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,accSensor,10);
+            sensorManager.registerListener(mySensorListener,accSensor,1000/sampleRate);
         }
         if (linerAccSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,linerAccSensor,10);
+            sensorManager.registerListener(mySensorListener,linerAccSensor,1000/sampleRate);
         }
         if(gravitySelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,gravitySensor,10);
+            sensorManager.registerListener(mySensorListener,gravitySensor,1000/sampleRate);
         }
         if(gyroUnCalSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,gyroUnCalSensor,10);
+            sensorManager.registerListener(mySensorListener,gyroUnCalSensor,1000/sampleRate);
         }
         if(gyroSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,gyroSensor,10);
+            sensorManager.registerListener(mySensorListener,gyroSensor,1000/sampleRate);
         }
         if(magSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,magSensor,10);
+            sensorManager.registerListener(mySensorListener,magSensor,1000/sampleRate);
         }
         if(magUnCalSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,magUnCalSensor,10);
+            sensorManager.registerListener(mySensorListener,magUnCalSensor,1000/sampleRate);
         }
         if(rotVecSelected.isChecked()){
-            sensorManager.registerListener(mySensorListener,rotVecSensor,10);
+            sensorManager.registerListener(mySensorListener,rotVecSensor,1000/sampleRate);
         }
         if(GPSSelected.isChecked()){
             initGPS();
